@@ -47,7 +47,7 @@ class BackgroundLocation {
   Future<Location> getCurrentLocation() async {
     var completer = Completer<Location>();
 
-    var _location = Location();
+    var _location = null;
     await getLocationUpdates((location) {
       _location.latitude = location.latitude;
       _location.longitude = location.longitude;
